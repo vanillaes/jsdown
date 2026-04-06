@@ -1,0 +1,29 @@
+{
+  "name": "jsdown",
+  "version": "0.0.0",
+  "description": "Markdown Doc Generator for JSDoc",
+  "keywords": [
+    "ecmascript",
+    "esm",
+    "esmodules",
+    "cli",
+    "markdown",
+    "jsdoc",
+    "documentation"
+  ],
+  "repository": "https://github.com/vanillaes/jsdown",
+  "author": "Evan Plaice <evanplaice@gmail.com> (https://evanplaice.com)",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "esmtk test",
+    "lint": "esmtk lint",
+    "type": "esmtk type",
+    "typings": "esmtk typings",
+    "clean": "esmtk clean --typings",
+    "preview": "esmtk preview"
+  }
+}
