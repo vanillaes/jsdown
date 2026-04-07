@@ -25,5 +25,8 @@
     "typings": "esmtk typings",
     "clean": "esmtk clean --typings",
     "preview": "esmtk preview"
+  },
+  "dependencies": {
+    "@vanillaes/esmtk": "^1.8.0"
   }
 }
