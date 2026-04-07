@@ -1,5 +1,5 @@
 {
-  "name": "jsdown",
+  "name": "@vanillaes/jsdown",
   "version": "0.1.0",
   "description": "Markdown Doc Generator for JSDoc",
   "keywords": [
@@ -27,7 +27,9 @@
     "type": "esmtk type",
     "typings": "esmtk typings",
     "clean": "esmtk clean --typings",
-    "preview": "esmtk preview"
+    "preview": "esmtk preview",
+    "preversion": "npm run test && npm run lint",
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {
     "@vanillaes/esmtk": "^1.8.0",
