@@ -2,7 +2,7 @@
 
 <h1 align="center">JSDown</h1>
 
-<div align="center">📜  Markdown Doc Generator for JSDoc  📜</div>
+<div align="center">📜  Markdown Documentation Generator for JSDoc  📜</div>
 
 <br />
 

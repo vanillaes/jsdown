@@ -1,7 +1,7 @@
 {
   "name": "@vanillaes/jsdown",
   "version": "0.1.1",
-  "description": "Markdown Doc Generator for JSDoc",
+  "description": "Markdown Documentation Generator for JSDoc",
   "keywords": [
     "ecmascript",
     "esm",
@@ -24,7 +24,6 @@
   "scripts": {
     "test": "esmtk test",
     "lint": "esmtk lint",
-    "type": "esmtk type",
     "typings": "esmtk typings",
     "clean": "esmtk clean --typings",
     "preview": "esmtk preview",
@@ -32,7 +31,7 @@
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
-    "@vanillaes/esmtk": "^1.8.0",
+    "@vanillaes/esmtk": "^1.8.2",
     "commander": "^14.0.3",
     "doctrine": "^3.0.0",
     "lodash-es": "^4.18.1"
