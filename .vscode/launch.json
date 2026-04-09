@@ -25,7 +25,6 @@
             ],
             "program": "${workspaceFolder}/bin/jsdown.js",
             "cwd": "${workspaceFolder}",
-            "args": ["src/**/*"],
             "console": "integratedTerminal",
         },
     ]

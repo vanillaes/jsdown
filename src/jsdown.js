@@ -9,7 +9,9 @@ import { basename, dirname, join } from 'node:path'
  * @param {object} options 'jsdown' options
  */
 export async function createDocs (files, options = {}) {
-  const sources = await match(files)
+  const defaultIgnores = ['node_modules/', 'coverage/', 'vendor/', '**/*.spec.js', '**/*.min.js', '.*']
+  const ignore = [...defaultIgnores].join(',')
+  const sources = await match(files, process.cwd(), ignore)
   sources.forEach(file => createDoc(file))
 }
 

@@ -18,6 +18,8 @@
 
 - **No Configuration**
 - Feed it JSDoc types and it spits out Markdown
+- The following are ignored by default: `node_modules/`, `coverage/`, `vendor/`, `*.spec.js`, `*.min.js`, and hidden files.
+
 
 ## jsdown
 
@@ -25,7 +27,7 @@
 
 `jsdown [...options] [files...]`
 
-- `[files]` - File(s) to lint (default `**/!(*.spec|index).js`)
+- `[files]` - File(s) to lint (default `**/!(index).js`)
 
 ### Usage
 
