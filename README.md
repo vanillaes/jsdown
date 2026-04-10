@@ -37,7 +37,7 @@ jsdown
 
 ```sh
 # generate documentation (matching a different file(s))
-lint-es '**/!(*.spec|index).cjs'
+jsdown '**/!(*.spec|index).cjs'
 ```
 
 *Note: In Linux/OSX, matcher patterns must be delimited in quotes.*

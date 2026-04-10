@@ -1,5 +1,5 @@
 import { docdown } from './index.js'
-import { fileExists, match } from '@vanillaes/esmtk'
+import { exists, readGitIgnore, match } from '@vanillaes/esmtk'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { basename, dirname, join } from 'node:path'
 
@@ -10,7 +10,11 @@ import { basename, dirname, join } from 'node:path'
  */
 export async function createDocs (files, options = {}) {
   const defaultIgnores = ['node_modules/', 'coverage/', 'vendor/', '**/*.spec.js', '**/*.min.js', '.*']
-  const ignore = [...defaultIgnores].join(',')
+  const gitIgnores = await readGitIgnore(process.cwd())
+  let ignores = [...defaultIgnores, ...gitIgnores]
+  // de-duplicate
+  ignores = [...new Set(ignores)]
+  const ignore = ignores.join(',')
   const sources = await match(files, process.cwd(), ignore)
   sources.forEach(file => createDoc(file))
 }
@@ -30,8 +34,8 @@ async function createDoc (path) {
   const srcPath = join(process.cwd(), 'src') // TODO: make this configurable?
   const docPath = join(process.cwd(), 'docs') // TODO: make this configurable?
 
-  const exists = await !fileExists(docPath)
-  if (!exists) {
+  const dirExists = await exists(docPath)
+  if (!dirExists) {
     await mkdir(docPath, { recursive: true })
   }
 
