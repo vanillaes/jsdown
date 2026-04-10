@@ -1,6 +1,6 @@
 {
   "name": "@vanillaes/jsdown",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Markdown Documentation Generator for JSDoc",
   "keywords": [
     "ecmascript",
