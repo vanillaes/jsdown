@@ -13,8 +13,3 @@ jobs:
     needs: ci
     uses: vanillaes/.github/.github/workflows/npm.yml@main
     secrets: inherit
-
-  cd-gh:
-    needs: ci
-    uses: vanillaes/.github/.github/workflows/gh.yml@main
-    secrets: inherit

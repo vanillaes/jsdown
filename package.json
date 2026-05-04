@@ -16,25 +16,28 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "jsdown": "bin/jsdown.js"
+    "jsdown": "bin/index.js"
   },
   "exports": {
     ".": "./src/index.js"
   },
   "scripts": {
-    "jsdown": "node ./bin/jsdown.js",
-    "test": "esmtk test",
-    "lint": "esmtk lint",
-    "typings": "esmtk typings",
+    "jsdown": "node ./bin/index.js",
+    "test": "es test",
+    "lint": "es lint",
+    "build": "es typings --types node",
     "clean": "esmtk clean --typings",
     "preview": "esmtk preview",
     "preversion": "npm run test && npm run lint",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
-    "@vanillaes/esmtk": "^2.0.0",
+    "@vanillaes/esmtk": "^2.7.2",
     "commander": "^14.0.3",
     "doctrine": "^3.0.0",
     "lodash-es": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
   }
 }
